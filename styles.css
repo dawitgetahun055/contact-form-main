@@ -1,0 +1,237 @@
+/* FONT STYLES */
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  /* COLORS */
+
+  --Lighter_Green-200: hsl(148, 38%, 91%);
+  --Medium_Green-600: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  --White: hsl(0, 0%, 100%);
+  --Medium_Grey-500: hsl(186, 15%, 59%);
+  --Darker_Grey-900: hsl(187, 24%, 22%);
+  --Font_size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 160dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Lighter_Green-200);
+  font-family: karla;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.form-card {
+  width: 375px;
+  height: max-content;
+  background-color: var(--White);
+  border-radius: 13px;
+}
+
+.form-card h1 {
+  margin-top: 10px;
+  margin-left: 15px;
+  font-weight: 700;
+}
+
+.form-card .wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  color: var(--Darker_Grey-900);
+  font-weight: 400;
+}
+
+.wrapper input {
+  margin-top: 10px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--Medium_Grey-500);
+  padding-left: 15px;
+}
+
+.query-type div {
+  border: 1px solid var(--Medium_Grey-500);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-radius: 10px;
+  gap: 10px;
+  height: 46px;
+  margin-top: 10px;
+}
+
+.query-type div input {
+  transform: translateY(-14%);
+}
+
+.message textarea {
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.checkbox div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+}
+
+.checkbox div input {
+  transform: translateY(-14%);
+}
+
+button {
+  width: 335px;
+  margin-left: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: none;
+  background-color: var(--Medium_Green-600);
+  color: var(--White);
+  cursor: pointer;
+}
+
+.wrapper.success input {
+  border-color: var(--Medium_Green-600);
+}
+
+.wrapper.error input {
+  border-color: var(--Red);
+}
+
+.wrapper .error {
+  color: var(--Red);
+  font-size: 12px;
+  height: 13px;
+}
+
+.query-type .second-div {
+  margin-top: 10px;
+}
+
+.query-type div:last-child {
+  border: none;
+}
+
+#radio {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  padding: 2.4px;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 1px solid var(--Medium_Grey-500);
+  border-radius: 50%;
+}
+
+#radio:checked {
+  background-color: var(--Medium_Green-600);
+}
+
+#errorDiv {
+  font-size: 12px;
+  height: 13px;
+  padding: 0;
+  border-radius: unset;
+}
+
+#checkboxError {
+  font-size: 12px;
+  height: 13px;
+  padding: 0;
+  border-radius: unset;
+  width: calc(375px - 40px);
+  margin-left: 20px;
+  height: max-content;
+  position: sticky;
+  margin-top: 0;
+  color: var(--Red);
+  margin-bottom: 30px;
+}
+
+button:is(:hover, :focus) {
+  background-color: hsl(169, 82%, 15%);
+}
+
+svg {
+  width: 17px;
+  height: 17px;
+  transform: translateY(15%);
+}
+
+.success-message {
+  width: 300px;
+  height: 100px;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  background-color: hsl(169, 82%, 15%);
+  color: var(--White);
+}
+
+.success-message > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.success-message p {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 1300px) {
+  .form-card {
+    width: calc(100% - 50%);
+  }
+
+  #name-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .wrapper.query-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .query-type .second-div {
+    margin-top: 8px;
+  }
+
+  button {
+    width: calc((680 / 720) * 100%);
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin: 20px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="success-message" style="display: none;">
+      <div>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>
+        </span>
+        <h3>Message Sent!</h>
+      </div>
+      <p>Thanks for completing the form. we'll be in touch soon!</p>
+    </div>
+
+    <div class="form-card">
+      <h1>Contact Us</h1>
+      <form action="" id="form">
+        <div id="name-container">
+          <div class="wrapper first">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" />
+            <div class="error"></div>
+          </div>
+          <div class="wrapper last">
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name" />
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <label for="email">Email Address *</label>
+          <input type="text" id="email" name="email" />
+          <div class="error"></div>
+        </div>
+
+        <div class="wrapper query-type">
+          <label>Query Type *</label><br />
+          <div>
+            <input
+              type="radio"
+              name="query-type"
+              value="General-Enquiry"
+              id="radio"
+            />
+            <label>General Enquiry</label>
+          </div>
+          <div class="second-div">
+            <input
+              type="radio"
+              name="query-type"
+              value="support-request"
+              id="radio"
+            />
+            <label>Support Request</label>
+          </div>
+          <div id="errorDiv" class="error"></div>
+        </div>
+
+        <div class="wrapper message">
+          <label for="message">Message *</label>
+          <textarea name="message" id="message" rows="9"></textarea>
+          <div class="error"></div>
+        </div>
+
+        <div class="wrapper checkbox">
+          <div>
+            <input type="checkbox" name="terms" id="checkbox" />
+            <label>I consent to being contacted by the team *</label>
+          </div>
+        </div>
+        <div class="error" id="checkboxError"></div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- This field is required Last Name This field is required Email Address Please
+    enter a valid email address This field is required Query Type General
+    Enquiry Support Request Please select a query type Message This field is
+    required I consent to being contacted by the team To submit this form,
+    please consent to being contacted Submit Message Sent! Thanks for completing
+    the form. We'll be in touch soon! -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Dawit Getahun</a>.
+    </div>
+
+    <script defer src="index.js"></script>
+  </body>
+</html>
